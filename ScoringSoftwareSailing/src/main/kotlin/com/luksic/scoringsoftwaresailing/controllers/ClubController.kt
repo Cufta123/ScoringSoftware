@@ -18,4 +18,8 @@ class ClubController (
     fun getClubs(): List<Club> {
         return clubService.getClubs()
     }
+    @GetMapping("/{id}")
+    fun getClubById(@PathVariable id: String): Club {
+        return clubService.getClubById(id)
+    }
 }
