@@ -6,8 +6,12 @@ import jakarta.validation.constraints.Size
 data class ClubRequest (
     @NotBlank
     @Size(min = 3, max = 20)
-    val nameOfTheClub: String,
+    val nameOfClub: String,
     @NotBlank
     @Size(min = 3, max = 20)
     val countryOfOrigin: String
+)
+
+data class AddUserRequest(
+    val username: String,
 )

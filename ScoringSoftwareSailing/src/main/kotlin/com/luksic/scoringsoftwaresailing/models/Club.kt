@@ -16,5 +16,5 @@ class Club {
     lateinit var id: String
     lateinit var nameOfClub: String
     lateinit var countryOfOrigin: String
-    var listOfUsersInClub: MutableList<User> = mutableListOf()
+    var listOfUsersInClub: MutableList<String> = mutableListOf()
 }

@@ -1,7 +1,9 @@
 package com.luksic.scoringsoftwaresailing.controllers
 
 import com.luksic.scoringsoftwaresailing.models.Club
+import com.luksic.scoringsoftwaresailing.payload.request.AddUserRequest
 import com.luksic.scoringsoftwaresailing.service.ClubService
+import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
 @RestController
@@ -21,5 +23,11 @@ class ClubController (
     @GetMapping("/{id}")
     fun getClubById(@PathVariable id: String): Club {
         return clubService.getClubById(id)
+    }
+
+    @PostMapping("/{clubName}/addUser")
+    fun addUserToClub(@PathVariable clubName: String, @RequestBody addUserRequest: AddUserRequest): ResponseEntity<Void> {
+        clubService.addUserToClub(clubName, addUserRequest.username)
+        return ResponseEntity.ok().build()
     }
 }

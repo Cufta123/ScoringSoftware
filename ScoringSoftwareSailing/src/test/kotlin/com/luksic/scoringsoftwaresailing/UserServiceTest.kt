@@ -2,6 +2,7 @@ package com.luksic.scoringsoftwaresailing
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.luksic.scoringsoftwaresailing.payload.request.LoginRequest
+import com.luksic.scoringsoftwaresailing.payload.request.SailboatRequest
 import com.luksic.scoringsoftwaresailing.payload.request.SignupRequest
 import org.hamcrest.CoreMatchers
 import org.hamcrest.MatcherAssert
@@ -54,10 +55,10 @@ internal class UserControllerTest {
     fun testRegisterUser() {
         // Create a signup request object
         val signupRequest = SignupRequest(
-            "testUser4",
-            "newuser4@example.com",
+            "testUser69",
+            "newuser69@example.com",
             listOf("mod", "user"),
-            "testPassword4"
+            "testPassword69"
         )
         val expectedResponse = "User registered successfully!"
         // Perform POST request to /api/auth/signup with the signup request as JSON
